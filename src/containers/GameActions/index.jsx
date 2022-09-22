@@ -44,7 +44,11 @@ const GameActions = ({
       {tries === 3 && <Hint getSongOfArtist={getSongOfArtist} />}
 
       <span className={styles.buttons}>
-        <button onClick={guessTheArtist} className={styles.btn}>
+        <button
+          onClick={guessTheArtist}
+          className={styles.btn}
+          disabled={isGameFinished}
+        >
           Guess
         </button>
         <button onClick={onResetGame} className={styles.btn}>

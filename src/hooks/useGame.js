@@ -51,7 +51,7 @@ const useGame = () => {
   };
 
   const startRound = async (aditionalOptions = {}) => {
-    if (aditionalOptions?.round > LAST_ROUND) handleLastRound();
+    if (aditionalOptions?.round > LAST_ROUND) return handleLastRound();
 
     const randomArtist = getRandomArtist();
     localStorage.setItem("artist", randomArtist);
