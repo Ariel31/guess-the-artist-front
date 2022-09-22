@@ -75,7 +75,7 @@ const useGame = () => {
     startRound(defaultGameValue);
   };
 
-  const guess = (guess) => {
+  const onGuess = (guess) => {
     const artist = localStorage.getItem("artist");
 
     if (artist === guess) {
@@ -116,7 +116,7 @@ const useGame = () => {
     round: game.round,
     albums: game.albums,
     resetGame,
-    guess,
+    onGuess,
     tries: game.tries,
     isGameFinished: !game.isOngoingGame,
     getSongOfArtist,
