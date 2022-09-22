@@ -41,7 +41,7 @@ const useGame = () => {
     let randomNumber;
 
     do {
-      randomNumber = Math.floor(Math.random() * 8);
+      randomNumber = Math.floor(Math.random() * artistList.length);
       isAlreadyPicked = artistsPicked.has(randomNumber);
     } while (isAlreadyPicked);
 
